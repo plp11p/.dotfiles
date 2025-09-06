@@ -1,25 +1,26 @@
 **Required packages:**
 
-- **Terminal:** ghostty  
-- **Shell:** zsh *(optional: fzf, bat)*  
-- **Editor:** neovim  
-- **Notification daemon:** mako  
-- **Bar:** waybar  
-- **App launcher:** wofi  
-- **File manager:** yazi  
-- **Bluetooth manager:** blueman  
-- **Screenshot tools:** slurp + grim  
-- **Resource monitor:** btop  
-- **Blue light filter:** wlsunset  
-- **Image viewer:** imv  
-- **Video player:** celluloid  
-- **Required fonts** woff2-font-awesome, ttf-nerd-fonts-symbols, ttf-jetbrains-mono
-- **Clibord manager** wl-clipboard
-- **Manager for GTK** nwg-look
-- **Wallpaper** swww
+- **Terminal:** ghostty
+- **Shell:** zsh (optional: fzf, bat)
+- **Editor:** neovim
+- **Bar:** waybar
+- **File manager**: yazi
+- **App launcher**: wofi
+- **Notification daemon:** mako
+- **Bluetooth manager:** blueman
+- **Video player:** celluloid
+- **Resource monitor:** btop
+- **Screenshot tools:** grim (paired with slurp)
+- **Image viewer:** imv
+- **Manager for GTK:** nwg-look
+- **Screenshot tools:** slurp (paired with grim)
+- **Wallpaper:** swww
+- **Required fonts** ttf-jetbrains-mono ttf-nerd-fonts-symbols woff2-font-awesome
+- **Clipboard manager**: wl-clipboard
+- **Blue light filter:** wlsunset
 
 ```bash
-sudo pacman -S fzf blueman ghostty zsh neovim wlsunset bat imv swww celluloid mako slurp grim waybar wofi btop yazi wl-clipboard  woff2-font-awesome ttf-nerd-fonts-symbols ttf-jetbrains-mono
+sudo pacman -Sy bat blueman btop celluloid fzf ghostty grim imv mako neovim slurp swww ttf-jetbrains-mono ttf-nerd-fonts-symbols waybar wl-clipboard wlsunset woff2-font-awesome wofi yazi zsh
 ```
 *Also update cache fonts*
 ```fc-cache -fv```
@@ -28,7 +29,7 @@ ___
 **Download**
 
 ```bash
-git clone https://github.com/plp11p/dotfiles ~/dotfiles && cd ~/dotfiles && mv -f .zshrc .p10k.zsh .zcompdump ~/ && mv -f config/* ~/.config/
+git clone https://github.com/plp11p/dotfiles && cd ~/dotfiles && mv -f .zshrc .p10k.zsh .zcompdump ~/ && mv -f config/* ~/.config/
 ```
 ___
 **Make GTK Theme**
