@@ -1,0 +1,12 @@
+font=JetBrains Mono 18
+width=600
+height=700
+border-size=3
+layer=overlay
+anchor=top-right
+default-timeout=3500
+ignore-timeout=1
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#45475a
+border-radius=12

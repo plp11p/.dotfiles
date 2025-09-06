@@ -1,0 +1,140 @@
+* {
+  font-family: "JetBrains Mono", "Font Awesome 7 Free", "Font Awesome 7 Free Solid", "Symbols Nerd Font";
+  font-weight: bold;
+  font-size: 20px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  padding: 0px 10px;
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* Monolithic workspace container */
+#workspaces {
+  font-size: 22px;
+  margin: 0 12px;
+  margin-top: 9px;
+  background: #1e1e2e;
+  border: 3px solid #11111b;
+  border-radius: 20px;
+  padding: 4px;
+}
+
+#workspaces button {
+  margin: 0 2px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 14px;
+  color: #6c7086;
+  transition: 300ms;
+  min-width: 16px;
+}
+
+/* Enhanced active workspace */
+#workspaces button.active {
+  color: #f5c2e7;
+  background: #313244;
+}
+
+#workspaces button.focused {
+  color: #a6adc8;
+  background: #262637;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+  background: #2d1b22;
+  animation: urgent-pulse 2s infinite;
+}
+
+@keyframes urgent-pulse {
+  0% { box-shadow: 0 0 5px rgba(243, 139, 168, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(243, 139, 168, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(243, 139, 168, 0.5); }
+}
+
+#workspaces button:hover:not(.active) {
+  color: #cdd6f4;
+  background: #262637;
+}
+
+#temperature,
+#memory,
+#clock,
+#battery {
+  background: #1e1e2e;
+  border: 3px solid #11111b;
+  border-radius: 16px;
+  margin: 0 12px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  transition: 200ms;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#clock {
+  font-size: 22px;
+  color: #f2cdcd;
+}
+
+#temperature {
+  color: #fab387
+}
+
+#temperature.critical{
+  border-left-color: #f38ba8;
+}
+
+#memory{
+  color: #f9e2af
+}
+
+#memory.critical{
+  border-left-color: #f38ba8;
+}
+
+#battery {
+  color: #f2cdcd;
+}
+
+#battery.warning {
+  color: #f9e2af;
+  animation: battery-warning 3s infinite;
+}
+
+#battery.critical {
+  color: #f38ba8;
+  border-left-color: #f38ba8;
+  animation: battery-critical 1s infinite;
+}
+
+#battery.charging {
+  color: #94e2d5;
+  border-left-color: #94e2d5;
+  animation: battery-charging 2s infinite;
+}
+
+@keyframes battery-warning {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+@keyframes battery-critical {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes battery-charging {
+  0% { border-left-color: #94e2d5; }
+  50% { border-left-color: #a6e3a1; }
+  100% { border-left-color: #94e2d5; }
+}
+

@@ -1,0 +1,81 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 62,
+    "modules-left": [
+        "clock"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "battery",
+        "memory",
+        "temperature",
+    ],
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": " 1 ",
+            "2": " 2 ",
+            "3": " 3 ",
+            "4": " 4 ",
+            "5": " 5 ",
+            "6": " 6 "
+        },
+        "persistent_workspaces": {
+            "*": 1
+        }
+    },
+    "clock": {
+	"format": "    {:%H:%M   %a,  %b %e}  ",
+	"tooltip-format": "<big>%Y %B</big>\n<tt>%a, %d %b %Y</tt>",
+	"interval": 60,
+	"format-alt": "  {:%Y - %m - %d}   "
+    },
+      "temperature": {
+        "thermal-zone": 0,
+        "critical-threshold": 76,
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "interval": 5
+    },
+  "memory": {
+    "interval": 5,
+    "format": "󰍛 {used:.1f}GB",
+    "tooltip": true,
+    "tooltip-format": "{used:.1f}GB / {total:.1f}GB ({percentage}%)",
+    "states": {
+      "warning": 70,
+      "critical": 90
+    }
+  },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 40,
+            "critical": 30
+        },
+        "format": " {icon} {capacity}% ",
+        "format-charging": "  {capacity}% ",
+        "format-plugged": "  {capacity}% ",
+        "format-alt": " {time} {icon} ",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+}

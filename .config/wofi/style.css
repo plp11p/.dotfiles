@@ -1,0 +1,145 @@
+/* ~/.config/wofi/style.css
+/* ----------------------
+   Palette (Mocha)
+   ---------------------- */
+:root{
+  /* Base */
+  --cp-crust:   #11111b;
+  --cp-mantle:  #181825;
+  --cp-base:    #1e1e2e;
+  --cp-surface0:#313244;
+  --cp-surface1:#45475a;
+  --cp-surface2:#585b70;
+  /* Text */
+  --cp-overlay0:#6c7086;
+  --cp-overlay1:#7f849c;
+  --cp-overlay2:#9399b2;
+  --cp-subtext0:#a6adc8;
+  --cp-subtext1:#bac2de;
+  --cp-text:    #cdd6f4;
+  /* Accents */
+  --cp-rosewater:#f5e0dc;
+  --cp-flamingo: #f2cdcd;
+  --cp-pink:     #f5c2e7;
+  --cp-mauve:    #cba6f7;
+  --cp-peach:    #fab387; /* primary highlight used below */
+  --cp-maroon:   #eba0ac;
+  --cp-yellow:   #f9e2af;
+  --cp-green:    #a6e3a1;
+  --cp-teal:     #94e2d5;
+  --cp-sky:      #74c7ec;
+  --cp-blue:     #89b4fa;
+  --cp-lavender: #b4befe;
+}
+/* ----------------------
+   Window + container
+   ---------------------- */
+window {
+  background-color: rgba(30, 30, 46, 0.99) ;
+  margin: 15px;
+  padding: 18px;
+  border-radius: 18px; !important
+  color: var(--cp-text);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 22px;
+}
+/* outer frame */
+#outer-box {
+  background-color: var(--cp-mantle);
+  border: 2px solid var(--cp-surface0);
+  padding: 12px;
+  border-radius: 18px;
+}
+/* input (prompt) */
+#input {
+  margin: 12px 15px;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background-color: var(--cp-surface0);
+  color: var(--cp-subtext1);
+  border: 2px solid var(--cp-surface1);
+  outline: none;
+  font-size: 20px;
+}
+/* scroll / entry list */
+#scroll {
+  max-height: 60vh;
+  margin-top: 15px;
+  padding-right: 12px;
+  background-color: var(--cp-mantle);
+  border-top: 0;
+}
+/* container for entries */
+#inner-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+}
+/* a single entry (default state) */
+#entry {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  border-radius: 10px; /* removed pill shape */
+  background-color: var(--cp-surface0);
+  color: var(--cp-text);
+  border: 2px solid var(--cp-surface1); /* match selected border thickness */
+}
+
+/* selected (focused) entry */
+#entry:selected {
+  background-color: var(--cp-peach);
+  color: var(--cp-crust);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--cp-surface2);
+  border: 2px solid var(--cp-peach); /* yellow border */
+  border-radius: 14px; /* match default shape */
+}
+/* text inside entry */
+#text {
+  font-weight: 460;
+  color: var(--cp-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 22px;
+}
+/* selected text color override */
+#text:selected {
+  color: var(--cp-crust);
+}
+/* optional subtitle/subtext (if present) */
+#subtext {
+  font-size: 18px;
+  color: var(--cp-subtext0);
+  margin-left: 10px;
+}
+/* selected subtext contrast */
+#subtext:selected {
+  color: var(--cp-crust);
+}
+/* images/icons next to entry */
+#img {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+  filter: saturate(0.95);
+}
+/* hovered state (non-focused mouse hover) */
+#entry:hover {
+  background-color: var(--cp-surface1);
+}
+/* small footer / helper text styling (if used) */
+#footer {
+  margin-top: 15px;
+  color: var(--cp-overlay1);
+  font-size: 18px;
+  text-align: center;
+}
+/* Accessibility: keyboard focus ring for input */
+#input:focus {
+  box-shadow: 0 0 0 4px var(--cp-mauve);
+}
