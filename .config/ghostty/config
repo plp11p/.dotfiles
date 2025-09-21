@@ -1,22 +1,19 @@
+theme = Catppuccin Mocha
+
 font-family = "JetBrains Mono"
 
 font-size = 22
 
 window-decoration = false
 
-theme = catppuccin-mocha
-
 shell-integration = zsh
-
-maximize = true
 
 title = "Ghostty"
 
 window-padding-balance = true
 
-cursor-style = "block"
+cursor-style = block
 cursor-style-blink = false
-cursor-opacity = 0.5
 
 shell-integration-features = "no-cursor"
 
