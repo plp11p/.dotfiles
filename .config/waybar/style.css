@@ -19,7 +19,7 @@ window#waybar {
   font-size: 22px;
   margin: 0 12px;
   margin-top: 9px;
-  background: #1e1e2e;
+  background: #000000;
   border: 3px solid #11111b;
   border-radius: 20px;
   padding: 4px;
@@ -38,7 +38,7 @@ window#waybar {
 
 /* Enhanced active workspace */
 #workspaces button.active {
-  color: #f5c2e7;
+  color: #ffffff;
   background: #313244;
 }
 
@@ -68,7 +68,7 @@ window#waybar {
 #memory,
 #clock,
 #battery {
-  background: #1e1e2e;
+  background: #000000;
   border: 3px solid #11111b;
   border-radius: 16px;
   margin: 0 12px;
@@ -80,11 +80,11 @@ window#waybar {
 
 #clock {
   font-size: 22px;
-  color: #f2cdcd;
+  color: #ffffff;
 }
 
 #temperature {
-  color: #fab387
+  color: #ffffff;
 }
 
 #temperature.critical{
@@ -92,7 +92,7 @@ window#waybar {
 }
 
 #memory{
-  color: #f9e2af
+  color: #ffffff;
 }
 
 #memory.critical{
@@ -100,7 +100,7 @@ window#waybar {
 }
 
 #battery {
-  color: #f2cdcd;
+  color: #ffffff;
 }
 
 #battery.warning {
