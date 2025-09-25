@@ -1,4 +1,27 @@
-theme = Black Metal (Marduk)
+background = #000000
+foreground = #FFFFFF
+cursor-color = #FFFFFF
+selection-background = #FFFFFF
+selection-foreground = #000000
+
+minimum-contrast = 1
+
+palette = 0=#000000
+palette = 1=#FFFFFF
+palette = 2=#FFFFFF
+palette = 3=#FFFFFF
+palette = 4=#FFFFFF
+palette = 5=#FFFFFF
+palette = 6=#FFFFFF
+palette = 7=#FFFFFF
+palette = 8=#000000
+palette = 9=#FFFFFF
+palette = 10=#FFFFFF
+palette = 11=#FFFFFF
+palette = 12=#FFFFFF
+palette = 13=#FFFFFF
+palette = 14=#FFFFFF
+palette = 15=#FFFFFF
 
 font-family = "JetBrains Mono"
 
