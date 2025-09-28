@@ -8,16 +8,16 @@ window-decoration = false
 
 shell-integration = zsh
 
-title = "Ghostty"
-
 window-padding-balance = true
 
 cursor-style = block
 cursor-style-blink = false
 
-shell-integration-features = "no-cursor"
+shell-integration-features = no-cursor
 
 confirm-close-surface = false
+
+keybind = f11=toggle_fullscreen
 
 
 
