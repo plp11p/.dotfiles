@@ -25,7 +25,6 @@ autoload -Uz _zinit
 autoload -Uz compinit
 compinit
 
-# Подсказки без истории (как в fish)
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 
 zinit light zdharma-continuum/fast-syntax-highlighting
@@ -48,11 +47,11 @@ HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 HISTFILE=~/.zsh_history
 
-unsetopt SHARE_HISTORY          # не делиться историей между сессиями
-setopt appendhistory            # сохранять историю между сессиями
-setopt hist_ignore_all_dups     # не добавлять дубликаты
-setopt hist_save_no_dups        # не сохранять дубликаты
-setopt hist_ignore_space        # не сохранять команды, начинающиеся с пробела
+unsetopt SHARE_HISTORY
+setopt appendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_space
 
 # ──────────────────────────────────────────────
 # Zsh options
@@ -73,11 +72,15 @@ setopt NO_MENU_COMPLETE
 export TERMINAL=ghostty
 export BROWSER=firefox
 
-alias fif='file=$(fzf --preview "ls -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
+alias fif='file=$(fzf --preview "eza -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
 
 alias fof='file=$(fzf) && [ -n "$file" ] && bat --style=plain --paging=never --color=always "$file" | fzf --ansi | wl-copy'
 
-
+alias cs='cd'
+alias hs='(eza -la --only-dirs; eza -la --only-files)'
+alias he='eza -af'
+alias ho='eza -aD'
+alias hi='(eza -a --only-dirs; eza -a --only-files)'
 # ──────────────────────────────────────────────
 # Key bindings
 # ──────────────────────────────────────────────
