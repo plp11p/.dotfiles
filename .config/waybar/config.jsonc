@@ -32,7 +32,7 @@
         }
     },
     "clock": {
-	"format": "    {:%H:%M   %a,  %b %e}  ",
+	"format": "  {:%H:%M   %a,  %b %e}  ",
 	"tooltip-format": "<big>%Y %B</big>\n<tt>%a, %d %b %Y</tt>",
 	"interval": 60,
 	"format-alt": "  {:%Y - %m - %d}   "

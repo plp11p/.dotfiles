@@ -40,7 +40,7 @@ window {
   padding: 18px;
   border-radius: 18px; !important
   color: var(--cp-text);
-  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-family: "CaskaydiaMono Nerd Font", "Fira Code", monospace;
   font-size: 22px;
 }
 /* outer frame */
