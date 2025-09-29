@@ -27,6 +27,8 @@ compinit
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 
+source /home/user/.config/fzf/catppuccin-fzf-mocha.sh
+zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS}
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -81,6 +83,9 @@ alias hs='(eza -la --only-dirs; eza -la --only-files)'
 alias he='eza -af'
 alias ho='eza -aD'
 alias hi='(eza -a --only-dirs; eza -a --only-files)'
+alias copy='wl-copy'
+alias paste='wl-paste'
+alias fuf='fzf'
 # ──────────────────────────────────────────────
 # Key bindings
 # ──────────────────────────────────────────────
