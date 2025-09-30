@@ -1,5 +1,4 @@
 **Required packages:**
-
 - **Terminal:** ghostty
 - **Shell:** zsh (optional: fzf, bat, eza)
 - **Editor:** neovim
