@@ -1,7 +1,7 @@
 **Required packages:**
 
 - **Terminal:** ghostty
-- **Shell:** zsh (optional: fzf, bat)
+- **Shell:** zsh (optional: fzf, bat, eza)
 - **Editor:** neovim
 - **Bar:** waybar
 - **File manager**: yazi
@@ -10,17 +10,16 @@
 - **Bluetooth manager:** blueman
 - **Video player:** celluloid
 - **Resource monitor:** btop
-- **Screenshot tools:** grim (paired with slurp)
+- **Screenshot tools:** slurp (paired with grim)
 - **Image viewer:** imv
 - **Manager for GTK:** nwg-look
-- **Screenshot tools:** slurp (paired with grim)
 - **Wallpaper:** swww
-- **Required fonts** ttf-jetbrains-mono ttf-nerd-fonts-symbols woff2-font-awesome
+- **Required fonts** ttf-cascadia-mono-nerd ttf-nerd-fonts-symbols woff2-font-awesome
 - **Clipboard manager**: wl-clipboard
 - **Blue light filter:** wlsunset
 
 ```bash
-sudo pacman -Sy bat blueman btop celluloid fzf ghostty grim imv mako neovim slurp swww ttf-jetbrains-mono ttf-nerd-fonts-symbols waybar wl-clipboard wlsunset woff2-font-awesome wofi yazi zsh
+sudo pacman -Sy bat blueman btop celluloid fzf ghostty grim imv mako neovim slurp swww ttf-cascadia-mono-nerd ttf-nerd-fonts-symbols waybar wl-clipboard wlsunset woff2-font-awesome wofi yazi zsh eza
 ```
 *Also update cache fonts*
 ```fc-cache -fv```
