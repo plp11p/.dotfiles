@@ -74,6 +74,8 @@ setopt NO_MENU_COMPLETE
 export TERMINAL=ghostty
 export BROWSER=firefox
 
+alias frufi='fzf | wl-copy'
+
 alias fif='file=$(fzf --preview "eza -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
 
 alias fof='file=$(fzf) && [ -n "$file" ] && bat --style=plain --paging=never --color=always "$file" | fzf --ansi | wl-copy'
