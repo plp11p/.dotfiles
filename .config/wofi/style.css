@@ -41,7 +41,7 @@ window {
   border-radius: 18px; !important
   color: var(--cp-text);
   font-family: "CaskaydiaMono Nerd Font", monospace;
-  font-size: 26px;
+  font-size: 20px;
 }
 /* outer frame */
 #outer-box {
@@ -59,7 +59,7 @@ window {
   color: var(--cp-subtext1);
   border: 2px solid var(--cp-surface1);
   outline: none;
-  font-size: 24px;
+  font-size: 22px;
 }
 /* scroll / entry list */
 #scroll {
@@ -99,12 +99,12 @@ window {
 }
 /* text inside entry */
 #text {
-  font-weight: 460;
+  font-weight: 500;
   color: var(--cp-text);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 26px;
+  font-size: 24px;
 }
 /* selected text color override */
 #text:selected {

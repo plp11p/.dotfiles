@@ -4,6 +4,8 @@ font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
 font-size = 24
 
+adjust-cell-height = 5
+
 window-decoration = false
 
 shell-integration = zsh
