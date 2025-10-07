@@ -73,6 +73,7 @@ setopt NO_MENU_COMPLETE
 # ──────────────────────────────────────────────
 export TERMINAL=ghostty
 export BROWSER=firefox
+export PATH="$HOME/.cargo/bin:$PATH"
 
 alias frufi='fzf | wl-copy'
 
