@@ -25,18 +25,16 @@ autoload -Uz _zinit
 autoload -Uz compinit
 compinit
 
-source <(fzf --zsh)
-source /home/user/.config/fzf/gruvbox.sh
-
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
-zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS}
 
-zinit light Aloxaf/fzf-tab
+source /home/user/.config/fzf/gruvbox-fzf-theme.sh
+zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS}
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
+zinit light Aloxaf/fzf-tab
 zinit light hlissner/zsh-autopair
 
 # ──────────────────────────────────────────────
@@ -60,6 +58,7 @@ setopt hist_ignore_space
 # ──────────────────────────────────────────────
 # Zsh options
 # ──────────────────────────────────────────────
+source <(fzf --zsh)
 setopt autocd
 setopt interactivecomments
 setopt magicequalsubst
@@ -67,10 +66,8 @@ setopt nonomatch
 setopt notify
 setopt numericglobsort
 setopt promptsubst
+setopt NO_MENU_COMPLETE
 
-# ──────────────────────────────────────────────
-# Environment
-# ──────────────────────────────────────────────
 export TERMINAL=ghostty
 export BROWSER=firefox
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -87,11 +84,8 @@ alias hi='(eza -a --only-dirs; eza -a --only-files)'
 alias copy='wl-copy'
 alias paste='wl-paste'
 alias fuf='fzf'
-# ──────────────────────────────────────────────
-# Key bindings
-# ──────────────────────────────────────────────
-#bindkey '\e[1;5C' forward-word       # Ctrl + →
-#bindkey '\e[1;5D' backward-word      # Ctrl + ←
+
+
 bindkey "^[[1;5D" backward-word      # Ctrl+←
 bindkey "^[[1;5C" forward-word 
 bindkey '\e[1;5A' up-line-or-history
@@ -110,4 +104,7 @@ bindkey "^H" backward-kill-word      # Ctrl+Backspace (или Backspace)
 
 autoload -U select-word-style
 select-word-style bash
+
 ### End of Zinit's installer chunk
+#
+#
