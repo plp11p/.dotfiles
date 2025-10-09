@@ -5,6 +5,7 @@
   min-height: 0;
 }
 
+/* Global container */
 window#waybar {
   background: transparent;
   padding: 0px 10px;
@@ -14,13 +15,13 @@ window#waybar {
   margin-left: 5px;
 }
 
-/* Monolithic workspace container */
+/* Workspaces container */
 #workspaces {
   font-size: 22px;
   margin: 0 12px;
   margin-top: 9px;
-  background: #1e1e2e;
-  border: 3px solid #11111b;
+  background: #282828; /* Gruvbox bg */
+  border: 3px solid #1d2021;
   border-radius: 20px;
   padding: 4px;
 }
@@ -31,95 +32,100 @@ window#waybar {
   background: transparent;
   border: none;
   border-radius: 14px;
-  color: #6c7086;
+  color: #928374; /* gray */
   transition: 300ms;
   min-width: 16px;
 }
 
-/* Enhanced active workspace */
+/* Active workspace */
 #workspaces button.active {
-  color: #f5c2e7;
-  background: #313244;
+  color: #fabd2f; /* yellow */
+  background: #3c3836;
 }
 
+/* Focused workspace */
 #workspaces button.focused {
-  color: #a6adc8;
-  background: #262637;
+  color: #ebdbb2; /* fg */
+  background: #32302f;
 }
 
+/* Urgent workspace */
 #workspaces button.urgent {
-  color: #f38ba8;
-  background: #2d1b22;
+  color: #fb4934; /* red */
+  background: #3c1f1e;
   animation: urgent-pulse 2s infinite;
 }
 
 @keyframes urgent-pulse {
-  0% { box-shadow: 0 0 5px rgba(243, 139, 168, 0.5); }
-  50% { box-shadow: 0 0 15px rgba(243, 139, 168, 0.8); }
-  100% { box-shadow: 0 0 5px rgba(243, 139, 168, 0.5); }
+  0% { box-shadow: 0 0 5px rgba(251, 73, 52, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(251, 73, 52, 0.8); }
+  100% { box-shadow: 0 0 5px rgba(251, 73, 52, 0.5); }
 }
 
 #workspaces button:hover:not(.active) {
-  color: #cdd6f4;
-  background: #262637;
+  color: #ebdbb2;
+  background: #3c3836;
 }
 
+/* Modules */
 #temperature,
 #memory,
 #clock,
 #battery {
-  background: #1e1e2e;
-  border: 3px solid #11111b;
+  background: #282828;
+  border: 3px solid #1d2021;
   border-radius: 16px;
   margin: 0 12px;
   margin-top: 8px;
   padding: 8px 16px;
   transition: 200ms;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
+/* Individual modules */
 #clock {
   font-size: 24px;
-  color: #f2cdcd;
+  color: #d79921; /* yellow-orange */
 }
 
 #temperature {
-  color: #fab387
+  color: #fe8019; /* orange */
 }
 
-#temperature.critical{
-  border-left-color: #f38ba8;
+#temperature.critical {
+  border-left-color: #fb4934; /* red */
 }
 
-#memory{
-  color: #f9e2af
+#memory {
+  color: #b8bb26; /* green-yellow */
 }
 
-#memory.critical{
-  border-left-color: #f38ba8;
+#memory.critical {
+  border-left-color: #fb4934;
 }
 
 #battery {
-  color: #f2cdcd;
+  color: #ebdbb2; /* fg */
 }
 
 #battery.warning {
-  color: #f9e2af;
+  color: #fabd2f; /* yellow */
   animation: battery-warning 3s infinite;
 }
 
 #battery.critical {
-  color: #f38ba8;
-  border-left-color: #f38ba8;
+  color: #fb4934; /* red */
+  border-left-color: #fb4934;
   animation: battery-critical 1s infinite;
 }
 
 #battery.charging {
-  color: #94e2d5;
-  border-left-color: #94e2d5;
+  color: #8ec07c; /* green */
+  border-left-color: #8ec07c;
   animation: battery-charging 2s infinite;
 }
 
+/* Animations */
 @keyframes battery-warning {
   0% { opacity: 1; }
   50% { opacity: 0.7; }
@@ -133,8 +139,8 @@ window#waybar {
 }
 
 @keyframes battery-charging {
-  0% { border-left-color: #94e2d5; }
-  50% { border-left-color: #a6e3a1; }
-  100% { border-left-color: #94e2d5; }
+  0% { border-left-color: #8ec07c; }
+  50% { border-left-color: #b8bb26; }
+  100% { border-left-color: #8ec07c; }
 }
 

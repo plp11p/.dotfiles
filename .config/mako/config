@@ -6,7 +6,27 @@ layer=overlay
 anchor=top-right
 default-timeout=3500
 ignore-timeout=1
-background-color=#1e1e2e
-text-color=#cdd6f4
-border-color=#45475a
+
+background-color=#282828
+text-color=#ebdbb2
+border-color=#504945
 border-radius=12
+
+# Accent for critical notifications
+[urgency=high]
+background-color=#cc241d
+border-color=#fb4934
+text-color=#fbf1c7
+
+# Accent for less important (low urgency)
+[urgency=low]
+background-color=#32302f
+border-color=#665c54
+text-color=#d5c4a1
+
+# Normal notifications
+[urgency=normal]
+background-color=#282828
+border-color=#504945
+text-color=#ebdbb2
+

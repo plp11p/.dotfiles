@@ -27,7 +27,7 @@ compinit
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 
-source /home/user/.config/fzf/catppuccin-fzf-mocha.sh
+source /home/user/.config/fzf/gruvbox.sh
 zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS}
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions

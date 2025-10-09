@@ -1,126 +1,120 @@
 /* ~/.config/wofi/style.css
-/* ----------------------
-   Palette (Mocha)
-   ---------------------- */
-:root{
+   Gruvbox Dark Theme — unified with mako, fzf, bat, eza
+*/
+
+:root {
   /* Base */
-  --cp-crust:   #11111b;
-  --cp-mantle:  #181825;
-  --cp-base:    #1e1e2e;
-  --cp-surface0:#313244;
-  --cp-surface1:#45475a;
-  --cp-surface2:#585b70;
+  --bg-dark:    #282828;
+  --bg-medium:  #3c3836;
+  --bg-light:   #504945;
+
   /* Text */
-  --cp-overlay0:#6c7086;
-  --cp-overlay1:#7f849c;
-  --cp-overlay2:#9399b2;
-  --cp-subtext0:#a6adc8;
-  --cp-subtext1:#bac2de;
-  --cp-text:    #cdd6f4;
+  --fg-main:    #ebdbb2;
+  --fg-muted:   #d5c4a1;
+
   /* Accents */
-  --cp-rosewater:#f5e0dc;
-  --cp-flamingo: #f2cdcd;
-  --cp-pink:     #f5c2e7;
-  --cp-mauve:    #cba6f7;
-  --cp-peach:    #fab387; /* primary highlight used below */
-  --cp-maroon:   #eba0ac;
-  --cp-yellow:   #f9e2af;
-  --cp-green:    #a6e3a1;
-  --cp-teal:     #94e2d5;
-  --cp-sky:      #74c7ec;
-  --cp-blue:     #89b4fa;
-  --cp-lavender: #b4befe;
+  --yellow:     #fabd2f;
+  --orange:     #fe8019;
+  --green:      #b8bb26;
+  --blue:       #83a598;
+  --purple:     #d3869b;
+  --red:        #fb4934;
 }
-/* ----------------------
-   Window + container
-   ---------------------- */
+
+/* Window */
 window {
-  background-color: rgba(30, 30, 46, 0.99) ;
+  background-color: rgba(40, 40, 40, 0.98);
   margin: 15px;
   padding: 18px;
-  border-radius: 18px; !important
-  color: var(--cp-text);
+  border-radius: 18px !important;  /* fixed syntax */
+  color: var(--fg-main);
   font-family: "CaskaydiaMono Nerd Font", monospace;
   font-size: 20px;
 }
-/* outer frame */
+
+/* Outer frame */
 #outer-box {
-  background-color: var(--cp-mantle);
-  border: 2px solid var(--cp-surface0);
+  background-color: var(--bg-medium);
+  border: 2px solid var(--bg-light);
   padding: 12px;
   border-radius: 18px;
 }
-/* input (prompt) */
+
+/* Input (prompt) */
 #input {
   margin: 12px 15px;
   padding: 15px 20px;
   border-radius: 12px;
-  background-color: var(--cp-surface0);
-  color: var(--cp-subtext1);
-  border: 2px solid var(--cp-surface1);
+  background-color: var(--bg-light);
+  color: var(--fg-main);
+  border: 2px solid var(--bg-medium);
   outline: none;
   font-size: 22px;
 }
-/* scroll / entry list */
+
+/* Scroll / entry list */
 #scroll {
   max-height: 60vh;
   margin-top: 15px;
   padding-right: 12px;
-  background-color: var(--cp-mantle);
+  background-color: var(--bg-medium);
   border-top: 0;
 }
-/* container for entries */
+
+/* Container for entries */
 #inner-box {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 12px;
 }
-/* a single entry (default state) */
+
+/* Entry (default) */
 #entry {
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 15px 25px;
-  border-radius: 10px; /* removed pill shape */
-  background-color: var(--cp-surface0);
-  color: var(--cp-text);
-  border: 2px solid var(--cp-surface1); /* match selected border thickness */
+  border-radius: 10px;
+  background-color: var(--bg-dark);
+  color: var(--fg-main);
+  border: 2px solid var(--bg-light);
 }
 
-/* selected (focused) entry */
+/* Selected (focused) entry */
 #entry:selected {
-  background-color: var(--cp-peach);
-  color: var(--cp-crust);
+  background-color: var(--yellow);
+  color: var(--bg-dark);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px var(--cp-surface2);
-  border: 2px solid var(--cp-peach); /* yellow border */
-  border-radius: 14px; /* match default shape */
+  box-shadow: 0 12px 40px var(--bg-medium);
+  border: 2px solid var(--yellow);
+  border-radius: 14px;
 }
-/* text inside entry */
+
+/* Text inside entry */
 #text {
   font-weight: 500;
-  color: var(--cp-text);
+  color: var(--fg-main);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 24px;
 }
-/* selected text color override */
 #text:selected {
-  color: var(--cp-crust);
+  color: var(--bg-dark);
 }
-/* optional subtitle/subtext (if present) */
+
+/* Subtext (optional) */
 #subtext {
   font-size: 20px;
-  color: var(--cp-subtext0);
+  color: var(--fg-muted);
   margin-left: 10px;
 }
-/* selected subtext contrast */
 #subtext:selected {
-  color: var(--cp-crust);
+  color: var(--bg-dark);
 }
-/* images/icons next to entry */
+
+/* Icons */
 #img {
   width: 28px;
   height: 28px;
@@ -128,18 +122,23 @@ window {
   object-fit: cover;
   filter: saturate(0.95);
 }
-/* hovered state (non-focused mouse hover) */
+
+/* Hovered entry */
 #entry:hover {
-  background-color: var(--cp-surface1);
+  background-color: var(--bg-light);
 }
-/* small footer / helper text styling (if used) */
+
+/* Footer text */
 #footer {
   margin-top: 15px;
-  color: var(--cp-overlay1);
+  color: var(--fg-muted);
   font-size: 20px;
   text-align: center;
 }
-/* Accessibility: keyboard focus ring for input */
+
+/* Input focus highlight */
 #input:focus {
-  box-shadow: 0 0 0 4px var(--cp-mauve);
+  box-shadow: 0 0 0 4px var(--blue);
 }
+
+
