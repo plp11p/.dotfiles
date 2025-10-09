@@ -25,16 +25,18 @@ autoload -Uz _zinit
 autoload -Uz compinit
 compinit
 
-ZSH_AUTOSUGGEST_STRATEGY=(completion)
-
+source <(fzf --zsh)
 source /home/user/.config/fzf/gruvbox.sh
+
+ZSH_AUTOSUGGEST_STRATEGY=(completion)
 zstyle ':fzf-tab:*' fzf-flags ${=FZF_DEFAULT_OPTS}
+
+zinit light Aloxaf/fzf-tab
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
-zinit light Aloxaf/fzf-tab
 zinit light hlissner/zsh-autopair
 
 # ──────────────────────────────────────────────
@@ -58,7 +60,6 @@ setopt hist_ignore_space
 # ──────────────────────────────────────────────
 # Zsh options
 # ──────────────────────────────────────────────
-source <(fzf --zsh)
 setopt autocd
 setopt interactivecomments
 setopt magicequalsubst
@@ -66,7 +67,6 @@ setopt nonomatch
 setopt notify
 setopt numericglobsort
 setopt promptsubst
-setopt NO_MENU_COMPLETE
 
 # ──────────────────────────────────────────────
 # Environment
@@ -76,9 +76,7 @@ export BROWSER=firefox
 export PATH="$HOME/.cargo/bin:$PATH"
 
 alias frufi='fzf | wl-copy'
-
 alias fif='file=$(fzf --preview "eza -l {} && echo && bat --color=always {}") && [ -n "$file" ] && nvim "$file"'
-
 alias fof='file=$(fzf) && [ -n "$file" ] && bat --style=plain --paging=never --color=always "$file" | fzf --ansi | wl-copy'
 
 alias cs='cd'
@@ -94,7 +92,6 @@ alias fuf='fzf'
 # ──────────────────────────────────────────────
 #bindkey '\e[1;5C' forward-word       # Ctrl + →
 #bindkey '\e[1;5D' backward-word      # Ctrl + ←
-#
 bindkey "^[[1;5D" backward-word      # Ctrl+←
 bindkey "^[[1;5C" forward-word 
 bindkey '\e[1;5A' up-line-or-history
@@ -113,7 +110,4 @@ bindkey "^H" backward-kill-word      # Ctrl+Backspace (или Backspace)
 
 autoload -U select-word-style
 select-word-style bash
-
 ### End of Zinit's installer chunk
-#
-#
