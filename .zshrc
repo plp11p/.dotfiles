@@ -84,6 +84,7 @@ alias hi='(eza -a --only-dirs; eza -a --only-files)'
 alias copy='wl-copy'
 alias paste='wl-paste'
 alias fuf='fzf'
+alias csne='cd ..'
 
 
 bindkey "^[[1;5D" backward-word      # Ctrl+←

@@ -1,41 +1,51 @@
-/* ~/.config/wofi/style.css
-   Gruvbox Dark Theme — unified with mako, fzf, bat, eza
-*/
 
+/* ~/.config/wofi/style.css
+   -------------------------
+   Palette (Gruvbox Dark Hard)
+   ------------------------- */
 :root {
   /* Base */
-  --bg-dark:    #282828;
-  --bg-medium:  #3c3836;
-  --bg-light:   #504945;
+  --gb-dark0_hard: #1d2021;
+  --gb-dark1:      #282828;
+  --gb-dark2:      #3c3836;
+  --gb-dark3:      #504945;
+  --gb-dark4:      #665c54;
 
-  /* Text */
-  --fg-main:    #ebdbb2;
-  --fg-muted:   #d5c4a1;
+  /* Light text */
+  --gb-light0:     #fbf1c7;
+  --gb-light1:     #ebdbb2;
+  --gb-light2:     #d5c4a1;
 
-  /* Accents */
-  --yellow:     #fabd2f;
-  --orange:     #fe8019;
-  --green:      #b8bb26;
-  --blue:       #83a598;
-  --purple:     #d3869b;
-  --red:        #fb4934;
+  /* Gray / muted text */
+  --gb-gray:       #a89984;
+
+  /* Accent colors */
+  --gb-red:        #fb4934;
+  --gb-green:      #b8bb26;
+  --gb-yellow:     #fabd2f;
+  --gb-blue:       #83a598;
+  --gb-purple:     #d3869b;
+  --gb-aqua:       #8ec07c;
+  --gb-orange:     #fe8019;
 }
 
-/* Window */
+/* ----------------------
+   Window + container
+   ---------------------- */
 window {
-  background-color: rgba(40, 40, 40, 0.98);
+  background-color: var(--gb-dark0_hard);
   margin: 15px;
   padding: 18px;
-  border-radius: 18px !important;  /* fixed syntax */
-  color: var(--fg-main);
+  border-radius: 18px;
+  color: var(--gb-light1);
   font-family: "CaskaydiaMono Nerd Font", monospace;
   font-size: 20px;
 }
 
 /* Outer frame */
 #outer-box {
-  background-color: var(--bg-medium);
-  border: 2px solid var(--bg-light);
+  background-color: var(--gb-dark1);
+  border: 2px solid var(--gb-dark3);
   padding: 12px;
   border-radius: 18px;
 }
@@ -45,9 +55,9 @@ window {
   margin: 12px 15px;
   padding: 15px 20px;
   border-radius: 12px;
-  background-color: var(--bg-light);
-  color: var(--fg-main);
-  border: 2px solid var(--bg-medium);
+  background-color: var(--gb-dark2);
+  color: var(--gb-light1);
+  border: 2px solid var(--gb-dark4);
   outline: none;
   font-size: 22px;
 }
@@ -57,7 +67,7 @@ window {
   max-height: 60vh;
   margin-top: 15px;
   padding-right: 12px;
-  background-color: var(--bg-medium);
+  background-color: var(--gb-dark1);
   border-top: 0;
 }
 
@@ -69,52 +79,56 @@ window {
   padding: 12px;
 }
 
-/* Entry (default) */
+/* Entry (default state) */
 #entry {
   display: flex;
   align-items: center;
   gap: 15px;
   padding: 15px 25px;
   border-radius: 10px;
-  background-color: var(--bg-dark);
-  color: var(--fg-main);
-  border: 2px solid var(--bg-light);
+  background-color: var(--gb-dark2);
+  color: var(--gb-light1);
+  border: 2px solid var(--gb-dark3);
 }
 
-/* Selected (focused) entry */
+/* Selected entry */
 #entry:selected {
-  background-color: var(--yellow);
-  color: var(--bg-dark);
+  background-color: var(--gb-yellow);
+  color: var(--gb-dark0_hard);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px var(--bg-medium);
-  border: 2px solid var(--yellow);
+  box-shadow: 0 12px 40px var(--gb-dark3);
+  border: 2px solid var(--gb-yellow);
   border-radius: 14px;
 }
 
 /* Text inside entry */
 #text {
   font-weight: 500;
-  color: var(--fg-main);
+  color: var(--gb-light1);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 24px;
 }
+
+/* Selected text color override */
 #text:selected {
-  color: var(--bg-dark);
+  color: var(--gb-dark0_hard);
 }
 
-/* Subtext (optional) */
+/* Optional subtitle/subtext */
 #subtext {
   font-size: 20px;
-  color: var(--fg-muted);
+  color: var(--gb-gray);
   margin-left: 10px;
 }
+
+/* Selected subtext contrast */
 #subtext:selected {
-  color: var(--bg-dark);
+  color: var(--gb-dark0_hard);
 }
 
-/* Icons */
+/* Images/icons next to entry */
 #img {
   width: 28px;
   height: 28px;
@@ -123,22 +137,20 @@ window {
   filter: saturate(0.95);
 }
 
-/* Hovered entry */
+/* Hovered state */
 #entry:hover {
-  background-color: var(--bg-light);
+  background-color: var(--gb-dark3);
 }
 
-/* Footer text */
+/* Footer / helper text */
 #footer {
   margin-top: 15px;
-  color: var(--fg-muted);
+  color: var(--gb-gray);
   font-size: 20px;
   text-align: center;
 }
 
-/* Input focus highlight */
+/* Input focus ring */
 #input:focus {
-  box-shadow: 0 0 0 4px var(--blue);
+  box-shadow: 0 0 0 4px var(--gb-orange);
 }
-
-

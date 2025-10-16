@@ -4,7 +4,7 @@ font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
 font-size = 24
 
-adjust-cell-height = 14
+adjust-cell-height = 25
 
 window-decoration = false
 
