@@ -1,4 +1,5 @@
 **Required packages:**
+
 - **Terminal:** ghostty
 - **Shell:** zsh (optional: fzf, bat, eza)
 - **Editor:** neovim
@@ -20,21 +21,26 @@
 ```bash
 sudo pacman -Sy bat blueman btop celluloid fzf ghostty grim imv mako neovim slurp swww ttf-cascadia-mono-nerd ttf-nerd-fonts-symbols waybar wl-clipboard wlsunset woff2-font-awesome wofi yazi zsh eza
 ```
-*Also update cache fonts*
-```fc-cache -fv```
 
-___
+_Also update cache fonts_
+`fc-cache -fv`
+
+---
+
 **Download**
 
 ```bash
 git clone https://github.com/plp11p/dotfiles && cd ~/dotfiles && mv -f .zshrc .p10k.zsh .zcompdump ~/ && mv -f config/* ~/.config/
 ```
-___
+
+---
+
 **Make GTK Theme**
+
 ```bash
-paru -S catppuccin-gtk-theme-mocha nwg-look
+paru -S gruvbox-gtk-theme-git nwg-look
 
 #or
 
-yay -S catppuccin-gtk-theme-mocha nwg-look
+yay -S gruvbox-gtk-theme-git nwg-look
 ```
