@@ -1,37 +1,28 @@
-
-/* ~/.config/wofi/style.css
-   -------------------------
-   Palette (Gruvbox Dark Hard)
-   ------------------------- */
+/*
+-------------------------
+  Palette
+  (Gruvbox Dark Hard)
+  -------------------------
+  */
 :root {
   /* Base */
   --gb-dark0_hard: #1d2021;
-  --gb-dark1:      #282828;
-  --gb-dark2:      #3c3836;
-  --gb-dark3:      #504945;
-  --gb-dark4:      #665c54;
-
-  /* Light text */
-  --gb-light0:     #fbf1c7;
-  --gb-light1:     #ebdbb2;
-  --gb-light2:     #d5c4a1;
-
-  /* Gray / muted text */
-  --gb-gray:       #a89984;
-
-  /* Accent colors */
-  --gb-red:        #fb4934;
-  --gb-green:      #b8bb26;
-  --gb-yellow:     #fabd2f;
-  --gb-blue:       #83a598;
-  --gb-purple:     #d3869b;
-  --gb-aqua:       #8ec07c;
-  --gb-orange:     #fe8019;
-}
-
-/* ----------------------
-   Window + container
-   ---------------------- */
+  --gb-dark1: #282828;
+  --gb-dark2: #3c3836;
+  --gb-dark3: #504945;
+  --gb-dark4: #665c54; /* Light text */
+  --gb-light0: #fbf1c7;
+  --gb-light1: #ebdbb2;
+  --gb-light2: #d5c4a1; /* Gray / muted text */
+  --gb-gray: #a89984; /* Accent colors */
+  --gb-red: #fb4934;
+  --gb-green: #b8bb26;
+  --gb-yellow: #fabd2f;
+  --gb-blue: #83a598;
+  --gb-purple: #d3869b;
+  --gb-aqua: #8ec07c;
+  --gb-orange: #fe8019;
+} /* ---------------------- Window + container ---------------------- */
 window {
   background-color: var(--gb-dark0_hard);
   margin: 15px;
@@ -40,17 +31,13 @@ window {
   color: var(--gb-light1);
   font-family: "CaskaydiaMono Nerd Font", monospace;
   font-size: 20px;
-}
-
-/* Outer frame */
+} /* Outer frame */
 #outer-box {
   background-color: var(--gb-dark1);
   border: 2px solid var(--gb-dark3);
   padding: 12px;
   border-radius: 18px;
-}
-
-/* Input (prompt) */
+} /* Input (prompt) */
 #input {
   margin: 12px 15px;
   padding: 15px 20px;
@@ -60,26 +47,20 @@ window {
   border: 2px solid var(--gb-dark4);
   outline: none;
   font-size: 22px;
-}
-
-/* Scroll / entry list */
+} /* Scroll / entry list */
 #scroll {
   max-height: 60vh;
   margin-top: 15px;
   padding-right: 12px;
   background-color: var(--gb-dark1);
   border-top: 0;
-}
-
-/* Container for entries */
+} /* Container for entries */
 #inner-box {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 12px;
-}
-
-/* Entry (default state) */
+} /* Entry (default state) */
 #entry {
   display: flex;
   align-items: center;
@@ -89,9 +70,7 @@ window {
   background-color: var(--gb-dark2);
   color: var(--gb-light1);
   border: 2px solid var(--gb-dark3);
-}
-
-/* Selected entry */
+} /* Selected entry */
 #entry:selected {
   background-color: var(--gb-yellow);
   color: var(--gb-dark0_hard);
@@ -99,9 +78,7 @@ window {
   box-shadow: 0 12px 40px var(--gb-dark3);
   border: 2px solid var(--gb-yellow);
   border-radius: 14px;
-}
-
-/* Text inside entry */
+} /* Text inside entry */
 #text {
   font-weight: 500;
   color: var(--gb-light1);
@@ -109,48 +86,35 @@ window {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 24px;
-}
-
-/* Selected text color override */
+} /* Selected text color override */
 #text:selected {
   color: var(--gb-dark0_hard);
-}
-
-/* Optional subtitle/subtext */
+} /* Optional subtitle/subtext */
 #subtext {
   font-size: 20px;
   color: var(--gb-gray);
   margin-left: 10px;
-}
-
-/* Selected subtext contrast */
+} /* Selected subtext contrast */
 #subtext:selected {
   color: var(--gb-dark0_hard);
-}
-
-/* Images/icons next to entry */
+} /* Images/icons next to entry */
 #img {
   width: 28px;
   height: 28px;
   border-radius: 8px;
   object-fit: cover;
   filter: saturate(0.95);
-}
-
-/* Hovered state */
+} /* Hovered state */
 #entry:hover {
   background-color: var(--gb-dark3);
-}
-
-/* Footer / helper text */
+} /* Footer / helper text */
 #footer {
   margin-top: 15px;
   color: var(--gb-gray);
   font-size: 20px;
   text-align: center;
-}
-
-/* Input focus ring */
+} /* Input focus ring */
 #input:focus {
   box-shadow: 0 0 0 4px var(--gb-orange);
 }
+
